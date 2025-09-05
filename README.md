@@ -80,16 +80,5 @@ Proyecto base para **Actividad 1 (Despliegue en AWS EC2)** y **Actividad 2 (Auto
 3. Agrega capturas del pipeline funcionando y (si hubo) errores + solución.
 4. Explica brevemente qué se automatizó y beneficios.
 
-> Guion de video: `docs/VIDEO-GUIA.md`
 
----
 
-## 🔐 Buenas prácticas
-- No subir `.pem` ni credenciales al repo público.
-- Mantén la instancia Free Tier y apágala si no la usas.
-- No exponer puertos internos (solo 80/443 por Nginx).
-
----
-
-## 📜 Licencia
-MIT
