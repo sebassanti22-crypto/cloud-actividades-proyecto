@@ -34,7 +34,7 @@ Proyecto base para **Actividad 1 (Despliegue en AWS EC2)** y **Actividad 2 (Auto
 └── scripts/
     └── ec2-ubuntu-setup.sh
 ```
-> **Importante**: cambia `TU-USUARIO/TU-REPO` en el badge por tu repo real.
+
 
 ---
 
@@ -52,16 +52,14 @@ Proyecto base para **Actividad 1 (Despliegue en AWS EC2)** y **Actividad 2 (Auto
    - `sudo apt update && sudo apt install -y git`
    - Copia el repo o usa el script:
      ```bash
-     bash scripts/ec2-ubuntu-setup.sh <TU-USUARIO> <TU-REPO>
-     ```
+   
 4. **Servicio y reverse proxy**
    - `systemctl status cloudapp` → activo
    - Nginx sirve la app en `http://<IP-EC2>/`
 5. **Verificación**
    - Frontend carga, prueba un nombre (ej: `pikachu`)
    - `/api/ping` responde `{ ok: true }`
-6. **Documentación**
-   - Agrega capturas (instancia, SG, SSH, Nginx, app funcionando, etc.).
+.
 
 
 ---
