@@ -1,12 +1,12 @@
 {
   "name": "cloud-actividades-aws",
   "version": "1.0.0",
-  "description": "Proyecto para Actividad 1 (EC2) y Actividad 2 (GitHub Actions). Node.js + Express + Pok\u00e9API.",
+  "description": "Proyecto para Actividad 1 (EC2) y Actividad 2 (GitHub Actions). Node.js + Express + PokéAPI.",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "express": "^4.18.2",
