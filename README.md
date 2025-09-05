@@ -63,7 +63,6 @@ Proyecto base para **Actividad 1 (Despliegue en AWS EC2)** y **Actividad 2 (Auto
 6. **Documentación**
    - Agrega capturas (instancia, SG, SSH, Nginx, app funcionando, etc.).
 
-> Guía extendida: `docs/CAPTURAS.md`
 
 ---
 
