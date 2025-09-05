@@ -1,6 +1,5 @@
-
-
 ![CI](https://github.com/sebassanti22-crypto/cloud-actividades-proyecto/actions/workflows/ci.yml/badge.svg)
+
 
 Proyecto base para **Actividad 1 (Despliegue en AWS EC2)** y **Actividad 2 (Automatización con GitHub Actions)**.
 
