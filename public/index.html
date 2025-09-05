@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Actividades - PokéAPI Demo</title>
+  <style>
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; margin: 2rem; line-height: 1.5; }
+    .card { max-width: 640px; border: 1px solid #ddd; border-radius: 12px; padding: 1rem 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    input, button { padding: .6rem .8rem; font-size: 1rem; }
+    input { width: 220px; }
+    button { cursor: pointer; }
+    .row { display: flex; gap: .5rem; align-items: center; }
+    .muted { color: #555; font-size: .9rem; }
+    pre { background: #f6f8fa; padding: .75rem; border-radius: 8px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Demo API + Frontend</h1>
+    <p class="muted">Actividad 1 (EC2) + Actividad 2 (GitHub Actions)</p>
+
+    <div class="row">
+      <label for="poke">Pokémon:</label>
+      <input id="poke" placeholder="pikachu" />
+      <button id="btn">Buscar</button>
+    </div>
+
+    <p id="status" class="muted"></p>
+    <pre id="out"></pre>
+
+    <script>
+      const out = document.getElementById('out');
+      const statusEl = document.getElementById('status');
+      document.getElementById('btn').addEventListener('click', async () => {
+        const name = document.getElementById('poke').value || 'pikachu';
+        statusEl.textContent = 'Buscando...';
+        out.textContent = '';
+        try {
+          const res = await fetch(`/api/pokemon/${encodeURIComponent(name)}`);
+          const data = await res.json();
+          statusEl.textContent = res.ok ? 'OK' : 'Error';
+          out.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          statusEl.textContent = 'Error de red';
+          out.textContent = String(e);
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
