@@ -1,4 +1,4 @@
-# Cloud Actividades: EC2 + GitHub Actions
+
 
 ![CI](https://github.com/TU-USUARIO/TU-REPO/actions/workflows/ci.yml/badge.svg)
 
